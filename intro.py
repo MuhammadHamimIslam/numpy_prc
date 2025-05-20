@@ -6,5 +6,4 @@ arr2 = np.array([1, 2, 3])
 
 print(arr1)
 print(arr2)
-
-print(np.dot(arr1, arr2))
+print(np.__version__) # numpy version 
