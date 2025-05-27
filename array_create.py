@@ -1,0 +1,58 @@
+import numpy as np
+
+
+# creating array with all zeroes 
+# works like np.zeros(shape, dtype, order)
+arr1 = np.zeros((3, 3), dtype="int8")
+print(arr1)
+
+# creating array with all 1
+# np.ones(shape, dtype, order)
+arr2 = np.ones((3, 3), dtype="int8")
+print(arr2)
+
+# generating a sequence of numbers
+# np.arange(start, end, step)
+arr3 = np.arange(10, 20, 1)
+print(arr3)
+
+# create an array by specifying the start, stop, and the number of elements we want
+# np.linspace(start, stop, num, endpoint=True, retstep=False, dtype, axis=0)
+arr4 = np.linspace(1, 10, num=5, dtype="int8")
+print(arr4)
+
+# generating array with random numbers
+# np.random.rand(size) // size isn't as tuple
+arr5 = np.random.rand(2, 3) # generates items as float 
+print(arr5)
+
+# creating array with random numbers within range
+# np.random.randit(start, end)
+rand_arr = np.random.randint(1, 10)
+print(rand_arr)
+
+# creating array from choosing elements from another array 
+# np.random.choice(array, size, replace=True)
+rand_choice = np.random.choice(arr3, (2, 3))
+print(rand_choice)
+
+# creating an empty array 
+# np empty(size, dtype, order="C")
+arr6 = np.empty((3, 3), dtype="int8")
+print(arr6)
+
+# filling an array with an item 
+# np.full(size, fill_item, order="C")
+arr7 = np.full((3, 3), 10)
+print(arr7)
+
+# creating identity matrix 
+# np.identity(len, dtype)
+arr8 = np.identity(3, dtype="int8")
+print(arr8)
+
+# converting list, tuple or this like object to numpy array
+# numpy.asarray(arr, dtype=None, order=None, device=None, copy=None, like=None)
+tpl = (1, 2, 3)
+arr8 = np.asarray(tpl)
+print(arr8)
