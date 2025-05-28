@@ -56,3 +56,23 @@ print(arr8)
 tpl = (1, 2, 3)
 arr8 = np.asarray(tpl)
 print(arr8)
+
+# creating a new numpy array of the same shape filled with zeros
+# numpy.zeros_like(arr, dtype=None, order='K', subok=True, shape=None)
+zeroes = np.zeros_like(arr7)
+print(zeroes)
+
+# creating a new numpy array of the same shape filled with ones
+# numpy.ones_like(arr, dtype=None, order='K', subok=True, shape=None)
+ones = np.ones_like(arr7)
+print(ones)
+
+# creating a new numpy array of the same shape but empty 
+# numpy.empty_like(arr, dtype=None, order='K', subok=True, shape=None)
+empty = np.empty_like(arr7)
+print(empty)
+
+# creating a new numpy array of the same shape filled with num
+# numpy.zeros_like(arr, num, order='K', subok=True, shape=None)
+fill = np.full_like(arr7, 14)
+print(fill)
