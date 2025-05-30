@@ -29,3 +29,8 @@ print(transpose1)
 # array.T
 transpose2 = arr1.T
 print(transpose2)
+
+# swapping an axis
+# np.swapaxes(a, axis1, axis2)
+arr3 = np.swapaxes(0, 1)
+print(arr3)
