@@ -76,3 +76,12 @@ print(empty)
 # numpy.zeros_like(arr, num, order='K', subok=True, shape=None)
 fill = np.full_like(arr7, 14)
 print(fill)
+
+# creating array from iterable
+# np.fromiter(Iterable, dtype)
+def gen(n): 
+    for i in range(n): 
+        yield i
+
+arr9 = np.fromiter(gen(5), dtype="int8")
+print(arr9)

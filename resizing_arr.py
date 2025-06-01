@@ -32,5 +32,26 @@ print(transpose2)
 
 # swapping an axis
 # np.swapaxes(a, axis1, axis2)
-arr3 = np.swapaxes(0, 1)
+arr3 = np.swapaxes(arr1, 0, 1)
 print(arr3)
+
+# moving an axis 
+# np.moveaxis(array, source, destination)
+arr4 = np. moveaxis(arr2, 0, 1)
+print(arr4)
+
+# array broadcast 
+# np.broadcast(*array)
+broadcast_obj = np.broadcast(2, arr1)
+for i, j in broadcast_obj:
+    print(i, j) # 2 is printed with every item in the array 
+
+# broadcasting an array to a new shape
+# np.broadcast_to(array, shape, subok=False)
+broadcast_arr = np.broadcast_to(flatten_arr, (3, 6))
+print(broadcast_arr)
+
+# adding a new axis or dimension to an array
+# np.expand_dims(array, axis)
+expanded = np.expand_dims(arr1, axis=1)
+print(expanded)
