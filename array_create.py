@@ -85,3 +85,17 @@ def gen(n):
 
 arr9 = np.fromiter(gen(5), dtype="int8")
 print(arr9)
+
+# generating an array with values that are evenly spaced on a log scale
+# np.logspace(start, stop, num=50, endpoint=True, base=10.0, dtype=None, axis=0)
+arr10 = np.logspace(1, 10, num=5)
+print(arr10)
+
+# generating coordinate matrices from coordinate vectors
+# np.meshgrid(*xi, copy=True, sparse=False, indexing='xy')
+x = np.arange(1, 4)
+y = np.arange(2, 6)
+
+X, Y = np.meshgrid(x, y)
+print("X coordinate: ", X)
+print("Y coordinate: ", Y)
