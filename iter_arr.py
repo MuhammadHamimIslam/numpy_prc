@@ -18,3 +18,23 @@ for i in range(rows):
 # iterating using np.nditer()
 for i in np.nditer(array2):
     print(i)
+
+# broadcasting iteration 
+arr1 = np.array([1, 3, 2])
+arr2 = np.array([2, 3, 4])
+
+for i, j in np.nditer([arr1, arr2]): 
+    print(i, j)
+    print(i + j) # performs matrix addition 
+
+# external loop 
+for row in np.nditer(array2, flags=["external_loop"]): # runs a loop and convert the 2d array to 1d
+    print(row)
+
+# modifying array value 
+print(f"before modifying: {arr1 = }")
+with np.nditer(arr1, flags=["buffered"], op_flags=["readwrite"]) as itr: 
+    for i in itr: 
+        i[...] = i ** 2 # squaring all value 
+
+print(f"after modifying: {arr1 = }")
