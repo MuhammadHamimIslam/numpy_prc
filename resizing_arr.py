@@ -17,6 +17,10 @@ for elm in flat:
 flatten_arr = arr1.flatten()
 print(flatten_arr)
 
+# finding max value using array.flatten()
+max_itm = np.max(flatten_arr)
+print("max number is: ", max_itm)
+
 # np.ravel(array, order="C")
 raveled = np.ravel(arr1)
 print(raveled)
