@@ -13,3 +13,9 @@ print(unique_elm1d)
 # finding unique elements in 2d array using np.unique()
 unique_elm2d = np.unique(arr2, axis=0)
 print(unique_elm2d)
+
+# Finding Unique Rows with Indexes
+
+unique_rows, index= np.unique(arr2, axis=0, return_index=True)
+print(unique_rows)
+print(index)
