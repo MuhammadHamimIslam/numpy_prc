@@ -3,6 +3,19 @@ import numpy as np
 matrix1 = np.arange(1, 10).reshape(3, 3)
 matrix2 = np.arange(0, 18, 2).reshape(3, 3)
 
+# creating matrix from string 
+mt1 = np.matrix("3 0 0; 0 2 0; 0 0 5")
+print(mt1)
+
+# creating matrix from array 
+# np.matrix(array)
+mt2 = np.matrix(matrix1)
+print(mt2)
+
+# np.asmatrix(array)
+mt3 = np.asmatrix(matrix2)
+print(mt3)
+
 # matrix addition 
 print(matrix1 + matrix2)
 
@@ -13,6 +26,7 @@ print(matrix1 - matrix2)
 print(np.dot(matrix1, matrix2)) # A × B
 print(matrix1 @ matrix2) # A × B
 print(np.matmul(matrix1, matrix2)) # A × B
+
 print(np.dot(matrix2, matrix1)) # B × A
 print(matrix2 @ matrix1) # B × A
 print(np.matmul(matrix2, matrix1)) # B × A
@@ -23,4 +37,22 @@ print(matrix1 * 2)
 # element wise multiplication 
 print(matrix1 * matrix2)
 
-# materix division 
+# inverse matrix 
+print(np.linalg.inv(mt1))
+
+# matrix transpose 
+print(matrix1.T)
+
+# finding determinet
+print(np.linalg.det(matrix1))
+
+# finding eigenvalue, eigenvector
+eigenvalues, eigenvector = np.linalg.eig(mt1)
+print(f"{eigenvalues = }")
+print(f"{eigenvector = }")
+
+# finding svd
+S, V, D = np.linalg.svd(matrix1)
+print(S)
+print(V)
+print(D)
