@@ -56,3 +56,17 @@ S, V, D = np.linalg.svd(matrix1)
 print(S)
 print(V)
 print(D)
+
+# value of a vector 
+vector = np.array([5, 12])
+norm = np.linalg.norm(vector) # returns the norm of the vector 
+print(norm)
+
+# solving linear equations 
+B = np.array([6, 4, 15])
+X = np.linalg.solve(mt1, B) # solve X for AX=B
+print(X)
+
+# computing condition 
+cond = np.linalg.cond(mt1)
+print(cond)
