@@ -27,3 +27,8 @@ ages = np.array([29, 31, 28, 34])
 indices = np.lexsort((names, ages)) # sort by name then sort by age
 print(names[indices])
 print(ages[indices])
+
+# partial sorting 
+# np.partition(array, kth) sorts the array so that kth element becomes the kth smallest element 
+np.partition(arr1, 4) # sorts the array as 4th element becomes the 4th smallest 
+print(arr1)
