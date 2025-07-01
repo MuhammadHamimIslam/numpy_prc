@@ -70,3 +70,16 @@ print(X)
 # computing condition 
 cond = np.linalg.cond(mt1)
 print(cond)
+
+# solving linear equations 
+# 3x + 2y = 5
+# x + 2y = 5
+# matrix representation -> [5, 5]
+# [3  2]
+# [1  2] x, y = ?
+
+a = np.array([[3, 2], [1, 2]], dtype=np.int32)
+b = np.array([5, 5])
+
+x, y = np.linalg.solve(a, b)
+print(x, y) # x and y value 

@@ -26,3 +26,8 @@ print(total / len(arr_single))
 end2 = time.perf_counter()
 
 print(end2 - st2)
+
+# In-place Operations for Vectorization
+# avoid creating new array. use in place operation 
+arr_single += 20 # adds 20 to every element 
+print(arr_single)
