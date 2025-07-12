@@ -17,6 +17,10 @@ print(np.ptp(a, axis=0))
 #  np.percentile(a, q, axis) -> computes the q-th percentile of the data along the specified axis
 print(np.percentile(a,50))
 
-# np.sum() and np.prod()
+# np.sum(), np.prod(), np.median()
 print(np.sum(a, axis=0)) # sum of elements along axis 0
 print(np.prod(a, axis=0)) # multiplication of elements along axis 0
+print(np.median(a)) # finds the median
+print(np.average(a)) # average of array elements
+print(np.std(a)) # calculates the standard deviatio
+print(np.var(a)) # returns the variance of elements in the array
